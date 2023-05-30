@@ -20,13 +20,13 @@ def cropping(path, crop_height, crop_width,k):
             print("Saved image " + output)
             tf.keras.utils.save_img(path,cropped_image)
             
-            # Flipped crop
+            # Orizontal flipped crop
             output = str(k) + '_hflip.png'
             path = os.path.join(output_path,output)
             print("Saved image " + output)
             tf.keras.utils.save_img(path,tf.image.flip_left_right(cropped_image))
             
-            # Adjusted brightness crop
+            # Vertical flipped crop
             output = str(k) + '_vflip.png'
             path = os.path.join(output_path,output)
             print("Saved image " + output)
